@@ -1,0 +1,48 @@
+{
+  "name": "womakerscode-javascript",
+  "version": "1.0.0",
+  "description": "starwars",
+  "main": "app.js",
+  "scripts": {
+   "dev": "nodemon",
+   "lint": "eslint --ext .js -f ./node_modules/eslint-friendly-formatter . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabiLessa/starwars-projeto.git"
+  },
+  "keywords": [
+    "nodejs",
+    "azure",
+    "javascript",
+    "express"
+  ],
+  "author": "Gabriela Lessa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabiLessa/starwars-projeto/issues"
+  },
+  "homepage": "https://github.com/GabiLessa/starwars-projeto#readme",
+  "dependencies": {
+    "eslint-friendly-formatter": "^4.0.1",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+        "husky": "^8.0.3"
+  },
+  "husky": {
+    "pre-commit": "lint-staged",
+    "pre-push": "npm run lint"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
